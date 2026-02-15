@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#141313d7,#68191c);
+    min-height:100vh;
+    overflow-y:auto;
+    color:white;
+}
+
+
+
+.container{
+    margin:80px auto;
+    max-width:1100px;
+    display:flex;
+    gap:40px;
+    align-items:stretch; /* 👈 importante */
+}
+
+.music-player{
+    position:fixed;
+    top:20px;
+    left:20px;
+    width:260px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    padding:15px;
+    border-radius:15px;
+    display:flex;
+    gap:10px;
+    align-items:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    z-index:999;
+}
+
+.cover{
+    width:60px;
+    height:60px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+.music-info h4{
+    margin:0;
+    font-size:14px;
+}
+
+.music-info p{
+    margin:2px 0 8px 0;
+    font-size:12px;
+    opacity:0.7;
+}
+
+.music-info button{
+    background:#ff4d6d;
+    border:none;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.music-info button:hover{
+    background:#ff1e4d;
+}
+
+
+
+h1{
+    font-family:'Great Vibes', cursive; /* nueva tipografía */
+    font-size:3em;
+    margin-bottom:20px;
+}
+
+
+p{
+    font-size:14px;
+    line-height:1.8;
+    max-width:600px;
+    font-family:'Playfair Display', sans-serif;
+    white-space:pre-wrap;
+
+}
+.texto{
+    flex:1;
+}
+
+.imagenes{
+    width:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between; /* las distribuye verticalmente */
+    height:100%; /* ocupa todo el alto del texto */
+}
+
+
+
+.imagenes img{
+    width:220px;
+    aspect-ratio:1/1; /* 👈 esto las hace cuadradas */
+    object-fit:cover;
+
+    background:white;
+    padding:10px 10px 40px 10px; /* marco polaroid */
+    box-shadow:0 15px 25px rgba(0,0,0,0.4);
+    border-radius:6px;
+
+    align-self:center;
+    transition:0.3s;
+}
+
+.imagenes img:nth-child(1){
+    transform:rotate(-6deg);
+}
+
+.imagenes img:nth-child(2){
+    transform:rotate(5deg);
+}
+
+.imagenes img:nth-child(3){
+    transform:rotate(-4deg);
+}
+
+.imagenes img:nth-child(4){
+    transform:rotate(6deg);
+}
+
+
+
+
+
+
+
+
+button:hover{
+    transform:scale(1.1);
+}
+
+@keyframes aparecer{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Corazones flotando */
+.heart{
+    position:absolute;
+    pointer-events:none;
+    animation: float linear forwards;
+    will-change: transform;
+}
+
+
+
+@keyframes float{
+    from{
+        transform: translateY(0);
+        opacity:1;
+    }
+    to{
+        transform: translateY(-150vh);
+        opacity:0;
+    }
+}
+
+
+
+</style>
+</head>
+
+<body>
+    <div class="music-player">
+    <img src="https://i.postimg.cc/nzV4qjps/ab67616d0000b2733cb8ef4d0d9a3827c8276eef.jpg" class="cover">
+    <div class="music-info">
+        <h4>High And Dry</h4>
+        <p>Radio Head</p>
+        <button onclick="toggleMusic()" id="playBtn">▶</button>
+    </div>
+</div>
+
+<audio id="miAudio" src="cancion.mp3.mp3"></audio>
+
+
+<div class="container">
+
+    <div class="texto">
+        <h1>Happy Valentine's day My love</h1>
+        <p>
+Para mí antes estas fechas no tenían un significado o una
+emoción más allá que significase amor y regalar,
+de tener la presencia de todas esas personas en las calles,
+la presencia de ver siempre parejas, familias
+o amigos que comparten un momento siempre con esa estética que brinda
+estas fechas, una la cual en aquellos tiempos no me veía compartiendo
+algo similar con alguien, porque por último ni siquiera tenía
+esa oportunidad de hacerlo con familiares o amigos, y jamás le daba un
+interés o al menos uno que los demás de verdad daban
+y un interés que también jamás se me inculcó con mi círculo social,
+siempre tomaba estos días como unos más, unos muy ajenos a lo que
+de verdad yo pertenecía, y recalcar de nuevo en mi cabeza jamás
+ocupé ese pensamiento de tener a alguien como tal para compartir eso mismo,
+jamás se me pasó por la cabeza al menos pensar en alguien cuando se
+trata de esas cosas. Es raro pensar ahora que ese ideal tuvo un giro
+y uno muy grande.
+
+Hace un año, un día como hoy estaba en un lugar que hasta ese
+entonces era desconocido aún, un lugar donde jamás imaginé que
+pasaron cosas, donde hace unos meses me fui dejando algo,
+me fui dejando algo que consideraba parte de mí, porque tuvo
+que ser tan importante para poder regresar y sin saber cómo logré hacerlo.
+De verdad tuvo que ser tanta la importancia y dolor también
+para estar ahí parado y de verdad recalcarse de estar ahí, que sobre
+todas las cosas se pudo, dejar todo de lado para hacerlo sin
+importar nada más. Hacerlo pero con mucho miedo de no poder lograrlo, pero que
+sería al menos para mí la muestra de un gran compromiso
+de mi promesa de amor. Fue una persona, una chica, fue mi vida,
+fue mi amor, fue MI GRAN MOTIVO
+
+Ahora cómo explico a ese niño, que tenía su cabeza y su mente muy
+fuera de ese lugar, sin alguna relación con esos motivos para alguien
+que había sido autor de una de las acciones y decisiones más
+problemáticas, si le preguntas. a cualquiera, pero también una de las
+más hermosas..
+
+Decirle que ese motivo general fue por esa fecha y aún más por el
+amor de tu vida, algo que un tiempo atrás ni se hubiera podido haber creído
+Ahora hoy ya vivido todo eso y más cosas lo puedo reafirmar con toda seguridad
+que no me arrepiento, de nada, ni de miedo, ni temor, ni los problemas,
+que arriesgo todo para poder aún seguir cometiendo, y siendo autor
+de muchas cosas que impulsó a una vida a la persona que desde un principio
+hice todo esto.
+
+Hoy 14 de Febrero no lo tomo como un día donde no pongo por delante
+lo que toda la gente en general asume, como una fecha de amor simplemente,
+que donde ya sabemos ambos, no se necesita una como tal para demostrarlo.
+Tomo una fecha donde va a representar y representó un compromiso al amor de mi vida
+donde fue un momento que puse toda mi disponibilidad solo a ella, y que aún el miedo
+desde ese día de iniciar esto con una gran barrera que se llama distancia
+hubo un momento que el amor pudo ser posible de quitar eso que más adelante
+en el año mi corazón sufriese por volverlo a hacer.
+
+Hoy volviendo a esa fecha ya hay una persona que pienso cuando se trata
+de esto, que no solo me gustaría pensarla, sino mostrarle mi amor de una
+y mil formas. Mi vida está ligada solo a usted como el lazo que ahora nos
+conecta a pesar de toda la distancia, así como quiero mi vida a su lado
+y con Dios de mi parte podré tenerla a mi lado y apoyarla y
+construir ese nuevo capítulo que tanto lloramos y sufrimos por mucho tiempo.
+Dios nos hizo fuertes con todo eso, porque superándolo demostramos
+que no hay nada más que no pueda con lo nuestro.
+
+Sofía mi niña.. mi amor.. mi futura esposa.. y la persona con la que quiero
+mi vida, el tiempo pasa y si Dios me lo concede y está a mi lado, le prometo
+que la amaré toda mi vida y la ayudaré, sanaré toda su alma.. y no me despegaré.
+No merezco mucho de lo que me da, jamás lo sentí, pero sí lo
+suficiente para que su amor a mí se reafirme totalmente.
+
+Y perdón por solo darle eso, me siento muy mediocre solo dándole esto
+al amor de mi vida, Una vez más demuestro que no soy capaz
+de llegar a todo lo realmente que es usted. Cuánto realmente me
+hubiera encantado haberlo hecho de una forma diferente.
+haberlo hecho muy diferente..
+haberla besado cuanto antes..
+        </p>
+    </div>
+
+    <div class="imagenes">
+        <img src="https://i.postimg.cc/bJpNVkBr/Whats-App-Image-2026-02-15-at-01-40-50.jpg">
+        <img src="https://i.postimg.cc/xTDY6KNC/Whats-App-Image-2026-02-15-at-01-29-49-(1).jpg">
+        <img src="https://i.postimg.cc/K8Q2cwqG/Whats-App-Image-2026-02-15x-at-01-47-20.jpg">
+        <img src="https://i.postimg.cc/tJ00mjTv/Whats-App-Image-2026-02-15-at-01-29-49.jpg">
+    </div>
+
+</div>
+
+<script>
+function crearCorazon(){
+
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+
+    const alturaTotal = document.documentElement.scrollHeight;
+    const scrollActual = window.scrollY;
+
+    // Posición horizontal aleatoria
+    heart.style.left = Math.random() * 100 + "vw";
+
+    // Aparece en distintas partes del documento
+    heart.style.top = (scrollActual + window.innerHeight + Math.random()*200) + "px";
+
+    // Tamaño aleatorio
+    heart.style.fontSize = (Math.random() * 25 + 15) + "px";
+
+    // Duración aleatoria
+    const duracion = Math.random() * 4 + 4;
+    heart.style.animation = `float ${duracion}s linear forwards`;
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    }, duracion * 1000);
+}
+
+setInterval(crearCorazon, 250);
+
+function toggleMusic(){
+    const audio = document.getElementById("miAudio");
+    const btn = document.getElementById("playBtn");
+
+    if(audio.paused){
+        audio.play();
+        btn.innerHTML = "⏸";
+    }else{
+        audio.pause();
+        btn.innerHTML = "▶";
+    }
+}
+
+</script>
+
+</body>
+</html>
